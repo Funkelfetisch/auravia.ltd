@@ -6,6 +6,8 @@
 <title>Auravia Ltd — a software studio building AI products</title>
 <meta name="description" content="Auravia Ltd is a software studio that designs and ships AI-native products across creativity, careers, property, health and the everyday — including Enchant, LazyLance, LazyHome, StarSync and OptimalRange." />
 <meta name="theme-color" content="#1d6fe0" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a1018" />
+<meta name="color-scheme" content="light dark" />
 <link rel="icon" type="image/png" href="auravia-logo-white.png" />
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -173,6 +175,27 @@
   .foot-links a:hover { color: var(--accent); }
   .copy { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 13px; color: var(--faint); }
 
+  /* ---------- dark mode — follows the browser / OS setting ---------- */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a1018;
+      --surface: #121d2e;
+      --ink: #e9eff7;
+      --muted: #9aabc4;
+      --faint: #6a7c94;
+      --accent: #4f93f0;
+      --accent-deep: #82b2f7;
+      --accent-soft: #16263f;
+      --border: #213049;
+      --shadow: 0 1px 2px rgba(0,0,0,.35), 0 14px 34px -16px rgba(0,0,0,.7);
+      --shadow-lift: 0 2px 4px rgba(0,0,0,.4), 0 26px 50px -20px rgba(79,147,240,.45);
+    }
+    header { background: rgba(10,16,24,.82); }
+    .eyebrow { border-color: #27405d; }
+    a.card:hover { border-color: #2f567f; }
+    .badge .d { background: #3c4d67; }
+  }
+
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 </style>
 </head>
@@ -180,7 +203,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#" aria-label="Auravia Ltd home"><img src="auravia-logo.png" alt="Auravia Ltd" /></a>
+    <a class="brand" href="#" aria-label="Auravia Ltd home"><picture><source media="(prefers-color-scheme: dark)" srcset="auravia-logo-dark.png" /><img src="auravia-logo.png" alt="Auravia Ltd" /></picture></a>
     <nav class="nav-links">
       <a href="#products">Products</a>
       <a href="#about">About</a>
@@ -305,7 +328,7 @@
   <div class="wrap">
     <div class="foot">
       <div>
-        <a class="brand" href="#"><img src="auravia-logo.png" alt="Auravia Ltd" /></a>
+        <a class="brand" href="#"><picture><source media="(prefers-color-scheme: dark)" srcset="auravia-logo-dark.png" /><img src="auravia-logo.png" alt="Auravia Ltd" /></picture></a>
         <p class="legal" style="margin-top:14px">
           <strong>Auravia Ltd</strong> is a company registered in Cyprus.<br />
           Registration number HE487392 &middot; VAT CY60329972V.<br />
